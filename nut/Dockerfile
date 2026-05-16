@@ -8,22 +8,22 @@ ARG NUT_VERSION=2.8.5
 
 # Setup builder
 RUN \
-    apt-get update \
-    && apt-get install -y --no-install-recommends \
-        autoconf=2.72-3.1 \
-        automake=1:1.17-4 \
-        build-essential=12.12 \
-        libhidapi-dev=0.14.0-1+b2 \
-        libltdl-dev=2.5.4-4 \
-        libmodbus-dev=3.1.11-2 \
-        libsnmp-dev=5.9.4+dfsg-2+deb13u1 \
-        libssl-dev=3.5.5-1~deb13u2 \
-        libusb-1.0-0-dev=2:1.0.28-1 \
-        libxml2-dev=2.12.7+dfsg+really2.9.14-2.1+deb13u2 \
-        libtool=2.5.4-4 \
-        pkg-config=1.8.1-4 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+       apt-get update \
+       && apt-get install -y --no-install-recommends \
+           autoconf \
+           automake \
+           build-essential \
+           libhidapi-dev \
+           libltdl-dev \
+           libmodbus-dev \
+           libsnmp-dev \
+           libssl-dev \
+           libusb-1.0-0-dev \
+           libxml2-dev \
+           libtool \
+           pkg-config \
+       && apt-get clean \
+       && rm -rf /var/lib/apt/lists/*
 
 # hadolint ignore=DL3003
 RUN \
